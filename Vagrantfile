@@ -4,13 +4,13 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  
-  config.vm.box = "WorkShopNeos"
-  
+
+  config.vm.box = "ttree/workshop-neos"
+
   config.vm.synced_folder ".", "/vagrant", type: "nfs"
-  
+
   config.vbguest.auto_update = false
-  
+
   config.ssh.forward_agent = true
 
   config.vm.network "private_network", ip: "192.168.77.21"
